@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x;
+        let y=6;
+        const z=8;
+        console.log(x,y,z);
+        let time=new Date().getHours();  
+        //条件循环语句
+        if(time<12)
+    {   
+        alert("Good morning");
+    }
+    else if(time<18)
+    {
+        alert("Good afternoon");
+
+    }
+    else
+    {
+        alert("晚上好");
+    }
+    //for循环语句
+    for(var i=0;i<5;i++)
+    {
+        console.log(i)
+    }
+    function hello()
+    {
+        alert("hello world");
+    }
+    hello();
+    function hello_with_return()
+    {
+       return "hello world";
+    }
+    function hello_with_param(name)
+    {
+        alert("hello"+name);
+    }
+    //作用域
+    let global_var=10;
+    function test()
+    {
+        let local_var=20;
+        console.log(global_var);
+        console.log(local_var);
+    }
+    hello_with_param("Win");
+    hello_with_param("OMT");
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom和JS的联动</title>
+</head>
+<body>
+    <div id="div1">这是一个id选择器标签</div>
+    <div class="div2">这是一个类选择器标签</div>
+    <div>这是一个普通标签</div>
+    <button id="555">这是一个Dom联动标签</button>
+    <script>
+        var element_id = document.getElementById('div1');
+        console.log(element_id);
+        var element_class=document.getElementsByClassName('div2')[0];
+        console.log(element_class);
+        var element_TagName = document.getElementsByTagName('div')[2];
+        console.log(element_TagName);
+
+        element_id.innerHTML ='<a href="https://www.baidu.com">百度</a>';   //修改标签内容
+        element_class.innerText ='a href="https://www.baidu.com';  //修改标签内容
+        element_TagName.innerHTML ='<a href="https://www.baidu.com">百度</a>';  //修改标签内容
+
+        //innerHTML和innerText的区别
+        //innerHTML会解析标签，innerText不会解析标签
+        element_id.style.color = 'red';  //修改标签样式
+        element_id.style.fontSize = '20px';  //修改标签样式
+        element_TagName.style.color = 'blue';  //修改标签样式
+        element_TagName.style.fontSize = '30px';  //修改标签样式
+
+        var button_dom=document.getElementsByTagName("button")[0];
+        // var button_dom=document.getElementById("555");
+        // button_dom.onclick = function()
+        // {
+        //     alert('这是一个Dom联动标签');
+        // }
+
+        button_dom.addEventListener('click',click_event);
+
+        function click_event()
+        {
+            alert('这是一个Dom联动标签');
+        }
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width:100%;
+            border:solid 1px pink;
+            background-color: lightgreen;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th,td{
+            border:solid 1px pink;
+            text-align: center;
+            padding: 10px;
+        }
+        #add{
+            text-align: center;
+            font-size: 30px;
+        }
+        button
+        {
+            margin:5px;
+        }
+    </style>
+    <script src=".js/addRow.js"></script>
+    <script src=".js/deleteRow.js"></script>
+    <script src=".js/editRow.js"></script>
+</head>
+<body>
+    
+    
+    <h1 style="text-align: center;">增删改查</h1>
+    <button id="add" onclick="add_Row()">添加数据</button>
+    <table id="table1">
+        <tr>
+            <th>用户名</th>
+            <th>手机号</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>用户1</td>
+            <td>15674162003</td>
+            <td><button onclick="edit_Row(this)">编辑</button>
+                <button onclick="delete_Row(this)">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>用户2</td>
+            <td>16165162222</td>
+            <td><button onclick="edit_Row(this)">编辑</button>
+                <button onclick="delete_Row(this)">删除</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -36,3 +36,8 @@ function a1()
 {
     alert("暂未完成谢谢");
 }
+
+function tiaozhuan6(button)
+{
+    location.href="旅行登记.HTML";
+}

@@ -8,7 +8,7 @@
    
     //获取表格的内容
     var inputName=prompt("请输入你的名字")
-    var inputPhone=prompt("请输入你的联系方式")
+    var inputPhone=prompt("请输入你的出行信息")
     if(!inputName.trim()||!inputPhone.trim())
     {
         alert("请输入内容");
@@ -18,6 +18,7 @@
         //写入表格
         name.innerHTML=inputName;
         phone.innerHTML=inputPhone;
+        alert("修改成功");
     }
     
     

@@ -15,9 +15,10 @@ function add_Row()
     var phonecell1 = newrow.insertCell(1);
     var actioncell1 = newrow.insertCell(2);
     namecell.innerHTML = "未命名";
-    phonecell1.innerHTML = "未获得联系方式";
+    phonecell1.innerHTML = "未获得信息";
     actioncell1.innerHTML = "<button onclick='edit_Row(this)'>编辑</button><button onclick='delete_Row(this)'>删除</button>";
     //添加新行的内容
+    alert("添加成功");
 
     
 

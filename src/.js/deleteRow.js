@@ -8,4 +8,5 @@ function delete_Row(button)
     var faker=row.parentNode;//获取row的父亲节点，即table
 //再利用表格删除button这一行，即为row
     faker.removeChild(row);
+    alert("删除成功");
 }

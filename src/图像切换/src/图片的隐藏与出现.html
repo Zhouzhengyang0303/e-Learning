@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="yc()" id="yincang">隐藏</button><br><br>
+    <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.TJGJtWYQTFkn3SIx50RqGwHaLH?w=1152&h=1728&rs=1&pid=ImgDetMain" id="bigpic" width="400px" height="400px"><br><br>
+    
+</body>
+    <script>
+        var bigpic1=document.getElementById("bigpic");
+        var yincang1=document.getElementById("yincang");
+        //获取时间源
+        function yc()
+        {
+           if(yincang1.innerHTML===`隐藏`)
+            {
+                bigpic1.style.display=`none`;
+                yincang1.innerHTML =`显示`;
+            }    
+            else
+            {
+                bigpic1.style.display=`block`;
+                yincang1.innerHTML=`隐藏`;
+            }
+        }
+   
+    </script>
+</html>

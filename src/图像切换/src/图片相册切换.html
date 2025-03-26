@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        ul{
+            list-style: none;
+            overflow: hidden;
+        }
+        ul li{
+            float:left;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            margin-top: 20px;
+            border: 2px solid #fff;
+        }
+        ul li.active
+        {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <img id="bigpic"  src="img/1.jpg" width="400px" height="400px" alt="">
+    <ul>
+        <li class="active">
+            <a href="#">
+                <img onmouseover="smallpic2() "id='smallpic' src="img/1.jpg" width="40px" height="40px" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img id='smallpic' src="img/2.jpg"width="40px" height="40px" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img id='smallpic' src="img/3.jpg"width="40px" height="40px" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img id='smallpic' src="img/4.jpg"width="40px" height="40px" alt="">
+            </a>
+        </li>
+    </ul>
+    <script>
+        var bigpic1=document.getElementById("bigpic");
+        var smallpic1=document.getElementsByClassName("smallpic");
+
+        for(var i=0;i<smallpic1.length;i++)
+    {
+        smallpic1[i].onmouseover=function()
+        {
+           for(var j=0;j<smallpic1.length;j++)
+           {
+            smallpic1[j].parentNode.parentNode.setAttribute('class','');
+           }
+            this.parentNode.parentNode.setAttribute(`class`,`active`);
+        }
+    }
+
+    </script>
+</body>
+</html>

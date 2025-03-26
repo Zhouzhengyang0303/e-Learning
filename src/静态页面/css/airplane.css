@@ -1,0 +1,21 @@
+.pic
+{
+    background-image: url("https://wallpaperm.cmcm.com/03751760ffcec8fdd2e547cee875ee02.jpg");
+    width:100%;
+    height: 650px;
+    margin:0 0 0 0;
+    padding-top: 10%;
+    
+}
+.pic div{
+    width:50%;
+    height:400px;
+    background-color: #333;
+    margin-left:26%;
+    border:solid 5px gold;
+    text-align: center;
+}
+.pic div h3{
+    color:white;
+    font-size:40px;
+}

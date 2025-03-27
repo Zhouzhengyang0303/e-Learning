@@ -1,16 +1,15 @@
 //添加
-function add_Row()
-{       
-    var table1=document.getElementById("table1");
-    console.log(table1);  
+function add_Row() {
+    var table1 = document.getElementById("table1");
+    console.log(table1);
     //获取表格  
     var row = table1.rows.length;
     console.log(row);
     //获取行数
-    var newrow= table1.insertRow(row);
+    var newrow = table1.insertRow(row);
     console.log(newrow);
     //获取添加新行
-    
+
     var namecell = newrow.insertCell(0);
     var phonecell1 = newrow.insertCell(1);
     var actioncell1 = newrow.insertCell(2);
@@ -20,6 +19,6 @@ function add_Row()
     //添加新行的内容
     alert("添加成功");
 
-    
+
 
 }

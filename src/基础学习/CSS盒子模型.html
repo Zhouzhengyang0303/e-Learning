@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS盒子模型</title>
+    <style>
+         .test
+            {
+                width: 200px;
+                height: 200px;
+                background-color: aquamarine;
+                border-style: solid;
+                border-color: red;
+                border-width: 5px 10px 6px 40px;/*上右下左 */
+                margin: 20px;/*盒子模型外边距离 */
+                 padding: 20px;/*内边距 */
+            }
+         .container
+         {     
+               width: 300px;
+               height:300px;
+               background-color: yellow;
+               
+         }
+         .pic
+         {      
+                float: left;
+               width: 500px;
+               height:600px;
+               
+         }
+    </style>
+</head>
+<body>  
+    <div class="test">这是一个盒子模型
+        <img src="https://ts3.tc.mm.bing.net/th?id=OIP-C.YmBnwfkMgzoyYCS7THLfYwHaNK&w=187&h=333&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+        <div calss="container">
+         <input type="text" class="form-control" placeholder="请输入用户名"><br><br>
+         <input type="password" class="form-control" placeholder="请输入密码"><br><br>
+         <button class="btn btn-primary">登录</button>
+        </div>  
+    <div class="pic">
+        <img src="https://ts3.tc.mm.bing.net/th?id=OIP-C.YmBnwfkMgzoyYCS7THLfYwHaNK&w=187&h=333&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+    </div>
+    </div>
+</body>
+</html>

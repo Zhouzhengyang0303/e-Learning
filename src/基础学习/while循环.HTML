@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+        let a=1
+        let b=+prompt("你需要打印的次数")
+        while(a<b+1)
+      {
+        document.write("加油学习<br>")
+        a++
+      }
+
+      //案例
+      //打印1-100
+      let i =1;
+      while(i<=100)
+      {
+        document.write(i)
+        i++
+      }
+      //算1-100的和
+      let m =1;
+      let sum=0;
+      while(m<=100)
+      { sum+=m
+        m++
+      }
+        document.write("<br>"+sum)
+      //算1-100的偶数和
+      let t=1;
+      let summ=0;
+      while(t<=100)
+      {
+        if(t%2===0)
+        {
+            summ+=t
+        }
+        t++
+      }
+      document.write('<br>'+summ)
+
+      
+      </script>
+</body>
+</html>

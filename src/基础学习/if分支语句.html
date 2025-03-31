@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //if 语句，除了0都为真
+        if(true)
+    {
+        console.log("真的一")
+
+    }
+        else
+    {
+        console.log('假的一')
+    }
+
+    //案例
+    var grade=+prompt("请输入你的高考成绩")
+    if(grade<=700)
+    {
+        alert("恭喜你，成为了屌毛")
+    }
+    else
+    {
+        alert("大神")
+    }
+
+    //案例
+    let uname=prompt("请输入用户名")
+    let pwd = +prompt("请输入你的密码")
+    if(uname==='pink'&&pwd===123456)
+    {
+        alert("登录成功")
+    }
+    else
+    {
+        alert("登录失败")
+    }
+
+    //案例
+    let year=+prompt("请输入要测试的年份")
+    if(year%4===0&&year%100!==0||year%400===0)
+    {
+        alert(`${year}年是闰年`)
+    }
+    else
+    {
+        alert(`${year}不是闰年`)
+    }
+
+    //案例
+    let grade1=+prompt('请输入你的成绩')
+    if(grade1>=90)
+    {
+        alert('评价为A')
+    }
+    else if(grade1>=80)
+    {
+        alert('评价为B')
+    }
+    else if(grade1>=70)
+    {
+        alert("评价为C")
+    }
+    else if(grade1>=60)
+    {
+        alert('评价为D')
+    }
+    else
+    {
+        alert("you`re fail")
+    }
+    </script>
+</body>
+</html>

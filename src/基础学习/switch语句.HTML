@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // switch(1)
+        // {
+        //     case 1:
+        //         document.write('你选择了1')
+        //     break
+        //     case 2:
+        //         document.write('你选择了2')
+        //     break
+        //     case 3:
+        //         document.write('你选择了3')
+        //     break
+        //     default:
+        //         document.write("你都没选上")
+        // }
+
+        //简单计算器
+        let num=+prompt("请输入一个数字")
+        let suanfa=prompt('请输入+-*/')
+        let num1=+prompt("请输入一个数字")
+        switch(suanfa)
+        {
+            case "+":
+                document.write(num+num1)
+                break;
+            
+            case "-":
+                document.write(num-num1)
+                break;   
+            case "*":
+                document.write(num*num1)
+                break;
+            
+            case "/":
+                document.write(num/num1)
+                break;   
+            default:
+                document.write("输入+-*/")
+        }
+
+        //断点调试
+        let unum=10;
+        unum=unum+1
+        console.log(unum)
+    </script>
+</body>
+</html>

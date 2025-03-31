@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <style>
+        .box1
+        {
+            height: 400px;
+            background-color: aqua;
+        }
+        .box1-normal
+        {
+            width: 150px;
+            height: 100px;
+            background-color: chartreuse;
+            
+        }
+        .box1-relative
+        {
+            width: 150px;
+            height: 100px;
+            background-color: crimson;
+            position: relative;
+            top: 50px;
+            left:150px;
+        }   
+        .box2
+        {
+            height: 400px;
+            background-color: pink;
+            margin-bottom:200px;
+        }
+        .box2-absolute/*绝对定位(虚化了)*/
+        {
+            width: 150px;
+            height: 100px;
+            background-color: darkorange;
+            position: absolute;
+            left: 150px;
+        }
+        .box-fixed
+        {
+            height: 400px;
+            background-color: yellow;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>相对定位</h1>
+    <div class="box1">
+        <div class="box1-normal"> </div>  
+        <div class="box1-relative"></div>
+        <div class="box1-normal"> </div>
+
+    </div>
+    <h1>绝对定位</h1>
+    <div class="box2">
+        <div class="box1-normal"> </div>  
+        <div class="box2-absolute"></div>
+        <div class="box1-normal"> </div>
+        <h1>固定定位</h1>
+        <div class="box-fixed">/*跟随之广告*/
+            <div class="box1-normal"> </div>  
+            <div class="box2-absolute"></div>
+            <div class="box1-normal"> </div>
+</body>
+</html>

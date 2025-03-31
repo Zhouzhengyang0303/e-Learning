@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            .father
+            {
+                background-color: green;
+                /* height: 200px; */
+                overflow: hidden;/*自动清除浮动*/
+               
+            }
+            .left-son
+            {
+                height: 200px;
+                width:300px;
+                float: left;
+                margin-left: 30px;
+                background-color: brown;
+            }
+            .right-son
+            {   
+                height: 200px;
+                width: 300px;
+                float: right;
+                background-color: aquamarine;
+            }
+        </style>
+</head>
+<body>
+    <div class="father">
+        我是父类
+        <div class="right-son">
+            我是右浮动
+        </div>
+        <div class="left-son">
+            <a>用户名:</a>
+            <input type="text" class="form-control" placeholder="请输入用户名"><br><br>
+            <a>密码  :</a>
+            <input type="password" class="form-control" placeholder="请输入密码"><br><br>
+        </div>
+    </div>
+</body>
+</html>

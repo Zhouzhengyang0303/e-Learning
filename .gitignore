@@ -55,6 +55,7 @@ project.fragment.lock.json
 artifacts/
 /obj/
 .cache
+.vs
 
 # StyleCop
 StyleCopReport.xml

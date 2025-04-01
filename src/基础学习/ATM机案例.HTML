@@ -7,12 +7,43 @@
 </head>
 <body>
     <script>
-        document.write('----------------------------------------------------')<br>
-        document.write('1.存钱')                                              <br>
-        document.write('2.取钱')                                              <br>
-        document.write('3.查询余额')                                          <br>
-        document.write('4.exit')                                                
-        docuemnt.write('----------------------------------------------------')
+            let money=100
+        // for(;;){}
+        while(true){
+            let xuanze=+prompt
+                          (`
+                              请输入你需要进行的操作
+                              1.查询余额
+                              2.存款
+                              3.取款
+                              4.exit  
+                           
+                             `)
+        if(xuanze===4)
+        {
+            break
+        }
+
+        switch(xuanze)
+        {
+            case 1:
+                alert(`你的余额是${money}`)
+                continue
+            case 2:
+                let cunmoney=+prompt('请输入你要存入的金额')
+                money+=cunmoney
+                alert(`恭喜存入！！你的余额是${money}`)
+                continue
+            case 3:
+                let qumoney=+prompt(`请输入你要取出的金额`)
+                money-=qumoney
+                alert(`恭喜取出！！你的余额是${money}`)
+                continue
+        }
+        
+               
+                              
+        }
     </script>
 </body>
 </html>

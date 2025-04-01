@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj=
+        {
+            name : '刘德华',
+            age  : '18',
+            weight: '65kg'    
+        }
+        for(let k in obj)
+        {
+            document.write(k+'<br>')
+            document.write(obj[k]+'<br>')//输出属性值必须是此
+            // document.write(k+':'+obj[k]+'<br>')
+            
+        }
+
+        // let cc=['周迅','kun','小黑子']
+        // for(let k in cc)
+        // {
+        //     document.write(k+':'+obj[k]+'<br>')
+           
+        // }
+        //for in 可以遍历数组但是不推荐遍历数组，遍历变量合适
+        //获得对象属性key必须是k
+        //获得对象值一定是obj[k]
+
+        let kun=
+        {
+            name:'caixukun',
+            age:'18',
+            sex:'girl or boy'
+        }
+        for(let key in kun )
+        {
+            console.log(key)//对象属性
+            console.log(kun[key])//对象值
+        }
+    </script>
+</body>
+</html>

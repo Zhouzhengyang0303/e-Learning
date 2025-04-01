@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span
+        {   
+            width: 137px;
+            margin: 2px;
+            border: solid pink 1px;
+            display: inline-block;
+            padding: 5px 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    //     for(i=1;i<=5;i++)
+    // {
+    //     if(i===3)
+    // {
+    //     continue
+    // }
+    //     document.write(i)
+    // }
+
+    //countinue直接退出本次循环
+    //break直接退出全部循环
+    //明确循环次数直接用for
+    //不明确循环次数用while
+
+    // for(i=1;i<=3;i++)
+    // {
+    //     document.write(`第${i}天<br>`)
+    //     for(b=1;b<=5;b++)
+    // {
+    //     document.write(`我今天背了${b}个单词<br>`)
+    // }
+    // }
+
+    //打印5排5个小星星
+    // let hang = +prompt('你要输入几行')
+    // let lie  = +prompt('你要输入几行')
+    // for(i=1;i<=hang;i++)
+    // {
+    //     for(j=1;j<=lie;j++)
+    //     {
+    //         document.write(`※`)
+    //     }
+    //     document.write(`<br>`)
+    // }
+
+    //倒立三角形
+    //乘法表
+        for(i=1;i<=9;i++)
+    {
+        for(j=1;j<=i;j++)
+    {
+        document.write(`<span>${j}X${i}=${i*j}</span>`)
+
+    }
+        document.write(`<br>`)
+    }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

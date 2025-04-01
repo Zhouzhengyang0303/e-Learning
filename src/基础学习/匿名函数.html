@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击我</button>
+
+    <script>
+        //匿名函数无法直接使用
+        //使用方法
+        //1.函数表达式
+        //2.立即执行函数
+        // let a=function(x,y)
+        // {
+        //     console.log(x+y)
+        // }
+        // a(3,8)
+        //具名函数的调用可以写到任何位置
+        //匿名函数的函数表达式方法不能写在其之前（函数表达式必须先申明后调用）
+
+        // let btn = document.querySelector('button')
+        // btn.onclick = function()
+        // {
+        //     alert("我是一个匿名函数表达式（匿名函数）")
+        // }
+        (function(x,y){
+            document.write(x+y)
+        //立即执行函数    
+        })(3,4)
+    </script>
+</body>
+</html>

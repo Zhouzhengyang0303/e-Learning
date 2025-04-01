@@ -1,100 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>机票酒店页面</title>
-<script src="js\123.js"></script>
-<style>
-         *{
-        margin: 0 0 0 0;
-        padding:0px;
+    <script src="js\123.js"></script>
+    <style>
+        * {
+            margin: 0 0 0 0;
+            padding: 0px;
 
         }
-        .header{
-        width:100%;
-        height:50px;
-        margin:0 auto 0 auto;
-        line-height: 50px;
-        background-color: gray;
-        }
-        .header div{
-        display:inline-block;
+
+        .header {
+            width: 100%;
+            height: 50px;
+            margin: 0 auto 0 auto;
+            line-height: 50px;
+            background-color: gray;
         }
 
-        .nav{
-        float:right;
-        width:40%;
-
-        }
-        .nav a{
-        margin-left:20px;
-        display: inline-block;
-        text-align: center;
-        background-color: gray;
-
-        }
-        .nav a:hover
-        {
-        background-color: aqua;
-        color:brown;
-        }
-        .searchbox{
-        margin-left: 50px;
-
-        }
-        .logo{
-        float:left;
-        margin-left: 40px;
+        .header div {
+            display: inline-block;
         }
 
-        .logo h3{
-        font-size: 32px;
-        color:gold;
-        letter-spacing: 2px;
-        margin-left:200px;
-}
-</style>
-<link rel="stylesheet" href="./css/airplane.css">
+        .nav {
+            float: right;
+            width: 40%;
+
+        }
+
+        .nav a {
+            margin-left: 20px;
+            display: inline-block;
+            text-align: center;
+            background-color: gray;
+
+        }
+
+        .nav a:hover {
+            background-color: aqua;
+            color: brown;
+        }
+
+        .searchbox {
+            margin-left: 50px;
+
+        }
+
+        .logo {
+            float: left;
+            margin-left: 40px;
+        }
+
+        .logo h3 {
+            font-size: 32px;
+            color: gold;
+            letter-spacing: 2px;
+            margin-left: 200px;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/airplane.css">
 </head>
+
 <body>
-<div class="header">
-    <div class="logo">
-        <h3>我的页面作业-旅游</h3>
+    <div class="header">
+        <div class="logo">
+            <h3>我的页面作业-旅游</h3>
+        </div>
+        <div class="searchbox">
+            <input id="searchtext" type="text" placeholder="请输入搜索内容" style="height: 30px;width:333px;">
+            <button onclick="search()" style="height: 30px;width: 90px;">搜索</button>
+        </div>
+        <div class="nav">
+            <a href="布局练习1.HTML">首页</a>
+            <a href="旅行登记.HTML">目标确立</a>
+            <a href="#">机票酒店</a>
+            <a onclick="a1()" href="#">新闻中心</a>
+            <a onclick="a1()" href="#">联系我们</a>
+        </div>
     </div>
-    <div class="searchbox">
-        <input id="searchtext" type="text" placeholder="请输入搜索内容" style="height: 30px;width:333px;">
-        <button onclick="search()" style="height: 30px;width: 90px;">搜索</button>
+    <div class="pic">
+        <div class="jipiao">
+            <h3>机票预订</h3>
+            <h3>------------------------------------------------------</h3>
+            <h4 style="float:left;color:white;margin-left:60px;;">单程票</h4>
+            <input type="radio" name="gen"
+                style="margin-left:23px;float:left;width: 25px;height: 25px;line-height: normal;">
+            <h4 style="float:left;color:white;margin-left:60px;;">往返票</h4>
+            <input type="radio" name="gen" style="margin-left:23px;float:left;width: 25px;height: 25px;">
+            <br><br>
+            <h3 style="float:left">出发地址:</h3>
+            <input type="text" placeholder="从哪里出发" style="float:left;margin-left: 10px; height: 40px;width:250px">
+            <h3 style="float:left;margin-left:20px">出发时间:</h3>
+            <input type="text" placeholder="什么时候出发" style="float:left;margin-left: 10px; height: 40px;width:250px">
+            <br><br><br>
+            <h3 style="float:left">最终地址:</h3>
+            <input type="text" placeholder="从哪里出发" style="float:left;margin-left: 10px; height: 40px;width:250px">
+            <h3 style="float:left;margin-left:20px">返回时间:</h3>
+            <input type="text" placeholder="什么时候出发" style="float:left;margin-left: 10px; height: 40px;width:250px">
+            <br><br>><button onclick="a1()" style="color:#333;width: 100px;height:60px;">一键预订</button>
+        </div>
     </div>
-    <div class="nav">
-        <a href="布局练习1.HTML" >首页</a>
-        <a href="旅行登记.HTML">目标确立</a>
-        <a href="#">机票酒店</a>
-        <a onclick="a1()" href="#">新闻中心</a>
-        <a onclick="a1()" href="#">联系我们</a>    
+    <div style="text-align: center;padding-top: 10px;background-color: red;">
+        <h2 style="font-size: 40px;color:white">昨夜扬州宿金莎，千秋粉黛吃早茶。个园青竹伴墨瓦，小桥流水一人家<h3>
     </div>
-</div>
-<div class="pic">
-    <div class="jipiao">
-        <h3>机票预订</h3>
-        <h3>------------------------------------------------------</h3>
-        <h4 style="float:left;color:white;margin-left:60px;;">单程票</h4>
-        <input type="radio" name="gen" style="margin-left:23px;float:left;width: 25px;height: 25px;line-height: normal;">
-        <h4 style="float:left;color:white;margin-left:60px;;">往返票</h4>
-        <input type="radio" name="gen" style="margin-left:23px;float:left;width: 25px;height: 25px;">
-        <br><br>
-        <h3 style="float:left">出发地址:</h3>
-        <input type="text" placeholder="从哪里出发" style="float:left;margin-left: 10px; height: 40px;width:250px">
-        <h3 style="float:left;margin-left:20px">出发时间:</h3>
-        <input type="text" placeholder="什么时候出发" style="float:left;margin-left: 10px; height: 40px;width:250px">
-        <br><br><br>
-        <h3 style="float:left">最终地址:</h3>
-        <input type="text" placeholder="从哪里出发" style="float:left;margin-left: 10px; height: 40px;width:250px">
-        <h3 style="float:left;margin-left:20px">返回时间:</h3>
-        <input type="text" placeholder="什么时候出发" style="float:left;margin-left: 10px; height: 40px;width:250px">
-        <br><br>><button onclick="a1()" style="color:#333;width: 100px;height:60px;">一键预订</button>
-    </div>
-    </div>
-<div style="text-align: center;padding-top: 10px;background-color: red;">
-    <h2 style="font-size: 40px;color:white">昨夜扬州宿金莎，千秋粉黛吃早茶。个园青竹伴墨瓦，小桥流水一人家<h3>
-</div>

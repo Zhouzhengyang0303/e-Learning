@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1  
-        {
+        h1 {
             text-align: center;
         }
-        table
-        {
+
+        table {
             border-collapse: collapse;
             height: 80px;
             margin: 0 auto;
         }
-        table,th,tr
-        {
+
+        table,
+        th,
+        tr {
             border: 2px red solid;
             width: 800px;
             height: 200px;
-           
+
         }
     </style>
 </head>
+
 <body>
     <h1>订货菜单</h1>
     <script>
-        var price=prompt("请输入商品单价");
-        var num=prompt("请输入产品数量");
-        var total=price*num;
+        var price = prompt("请输入商品单价");
+        var num = prompt("请输入产品数量");
+        var total = price * num;
         document.write(`
         <table style="text-align:center">
         <tr>
@@ -48,6 +51,7 @@
         </tr>
         `);
     </script>
-  
+
 </body>
+
 </html>

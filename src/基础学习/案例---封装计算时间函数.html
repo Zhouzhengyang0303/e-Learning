@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let s =+prompt('请输入秒数');
-        (function(shumiao){
-            if(shumiao/60>=1)
-            {
-                let shufen=parseInt(shumiao/60)
-                shumiao = parseInt(shumiao%60)
-                if(shufen/60>=1)
-                {
-                    let shushi=parseInt(shufen/60)
-                    shufen=parseInt(shufen%60)
-                    if(shumiao<10)
-                    {
-                        shumiao='0'+shumiao
+        let s = +prompt('请输入秒数');
+        (function (shumiao) {
+            if (shumiao / 60 >= 1) {
+                let shufen = parseInt(shumiao / 60)
+                shumiao = parseInt(shumiao % 60)
+                if (shufen / 60 >= 1) {
+                    let shushi = parseInt(shufen / 60)
+                    shufen = parseInt(shufen % 60)
+                    if (shumiao < 10) {
+                        shumiao = '0' + shumiao
                     }
-                    
+
                     document.write(`${shushi}时${shufen}分${shumiao}秒`)
                 }
-                else
-                {   
+                else {
                     shushi = '00'
-                    if(shufen<10)
-                    {
-                        shufen='0'+shufen
+                    if (shufen < 10) {
+                        shufen = '0' + shufen
                     }
-                    if(shumiao<10)
-                    {
-                        shumiao='0'+shumiao
+                    if (shumiao < 10) {
+                        shumiao = '0' + shumiao
                     }
                     document.write(`${shushi}时${shufen}分${shumiao}秒`)
                 }
             }
-            else
-            {
+            else {
                 shufen = '00';
                 shushi = '00';
-                if(shumiao<10)
-                    {
-                        shumiao='0'+shumiao
-                    }
-                    
+                if (shumiao < 10) {
+                    shumiao = '0' + shumiao
+                }
+
                 document.write(`${shushi}时${shufen}分${shumiao}秒`)
             }
-            
-            
+
+
         })(s)
-    
-        
+
+
     </script>
 </body>
+
 </html>

@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table
-        {
-            width:600px;
+        table {
+            width: 600px;
             border: 1px solid black;
-            
+
         }
-        table >caption
-        {   
+
+        table>caption {
             font-weight: 600px;
             text-align: center;
             margin-bottom: 10px;
-            margin-top:10px;
+            margin-top: 10px;
             font-size: 20px;
         }
+
         table,
         th,
-        td{
-            border:1px solid black;
+        td {
+            border: 1px solid black;
             border-collapse: collapse;
             text-align: center;
         }
-        table>th>td
-        {
-             
+
+        table>th>td {
+
             text-align: center;
         }
-        th
-        {
+
+        th {
             flex-direction: column;
             text-align: center;
         }
-        tr
-        {
+
+        tr {
             height: 40px;
             cursor: pointer;
         }
     </style>
 </head>
+
 <body>
     <table>
         <caption>学生列表</caption>
@@ -53,26 +55,26 @@
             <th>性别</th>
             <th>家乡</th>
         </tr>
-    
-    <script>
-        let student=[
-        {name:'小明',age:20,gentle:'man',hometown:'南京'},
-        {name:'小王',age:18,gentle:'woman',hometown:'甘肃'},
-        {name:'小周',age:16,gentle:'man',hometown:'武汉'},
-        {name:'小吴',age:14,gentle:'woman',hometown:'长沙'}]
-        for(let i=0;i<=student.length-1;i++)
-        {
+
+        <script>
+            let student = [
+                { name: '小明', age: 20, gentle: 'man', hometown: '南京' },
+                { name: '小王', age: 18, gentle: 'woman', hometown: '甘肃' },
+                { name: '小周', age: 16, gentle: 'man', hometown: '武汉' },
+                { name: '小吴', age: 14, gentle: 'woman', hometown: '长沙' }]
+            for (let i = 0; i <= student.length - 1; i++) {
                 document.write(`
                 <tr>
-                    <td>${i+1}</td>
+                    <td>${i + 1}</td>
                     <td>${student[i].name}</td>
                     <td>${student[i].age}</td>
                     <td>${student[i].gentle}</td>
                     <td>${student[i].hometown}</td>
                 </tr>
                 `)
-        }
-    </script>
+            }
+        </script>
     </table>
 </body>
+
 </html>

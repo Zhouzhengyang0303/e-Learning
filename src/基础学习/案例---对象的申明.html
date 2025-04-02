@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let per=
+        {
+            sex:'男',
+            age:18,
+            hobby:'study',
+            speak:function()
+            {
+                console.log('speak方法被调用')
+            },
+            eat:function()
+            {
+                console.log('eat方法被调用')
+            },
+        }
+        document.write(`姓名为:${per.sex}<br>`)
+        document.write(`年龄为:${per.age}<br>`)
+        document.write(`爱好为:${per.hobby}<br>`)
+
+        per.eat()
+        per.speak()
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Getrandom(N,M)
+        {
+            return Math.floor(Math.random()*(M-N+1))+N
+        }
+        let random=Getrandom(5,100)
+        
+        while(true)
+    {   
+        let cai =+prompt('请输入你要猜的数')
+        if(cai<random)
+        {
+            alert('你猜小了哦')
+            
+        }
+        else if(cai>random)
+        {
+            alert('你猜大了哦')
+            
+        }
+        else
+        {
+            alert(`你猜对了是${random}`)
+            break
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="change(this)">别点我会发生不好的事</button>
+    <div class="box">我是一个文字内容</div>
+    <script>
+       function change(button)
+       {
+        const box = document.querySelector('.box')
+        console.log(box.innerText)
+        box.innerText='我是一个盒子'//修改文件内容
+       }
+    </script>
+</body>
+</html>

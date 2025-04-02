@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pw">坦克车</p>
+    <ul class="nav" style="color:green">
+        <li>我的首页</li>
+        <li>产品介绍</li>
+        <li>联系方式</li>
+    </ul>
+    <!-- <div>123</div>
+    <div id="box">abc</div> -->
+    <script>
+        // const div = document.querySelector('div')
+        // console.dir(div)  //Dom对象
+        // //选择匹配的第一个选择器
+        // const box = document.querySelector('#box')
+        // console.dir(box)//单个
+        // const li = document.querySelector('ul li:first-child')
+        // console.dir(li)
+        //    const li = document.querySelectorAll('ul li')//多个
+        //    console.log(li)//数组形式返回
+        const nav =document.querySelectorAll('.nav li')
+        for(let i=0;i<=nav.length-1;i++)
+        {
+            nav[i].style.color='red'
+        }
+        const pw = document.querySelectorAll('#pw')
+        pw[0].style.color='green'
+        
+       
+
+        
+    </script>
+</body>
+</html>

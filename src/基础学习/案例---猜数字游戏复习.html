@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let start = +prompt('请输入你想开始猜的数')
+        let end = +prompt('请输入你结束的数字')
+        function Getrandom(n,m)
+        {
+            return Math.floor(Math.random()*(m-n+1)+n)
+        }
+        let c = Getrandom(start,end)
+        console.log(c);
+        for(i=1;i<=8;i++)
+        {   
+            let shuru = +prompt('请输入你想猜的数据')
+            if(shuru< c)
+            {
+                alert('你猜的太小了')
+            }
+            else if(shuru > c)
+            {
+                alert('你猜的太大了')
+            }
+            else if(shuru === c)
+            {
+                alert('你猜对了老表')
+                break
+            }
+        }
+        
+    </script>
+</body>
+</html>

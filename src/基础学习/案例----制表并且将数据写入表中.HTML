@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+          margin-left: 500px ;
+          margin-top: 150px;
+        }
+        table
+        {
+          
+            width: 500px;
+            height: auto;
+            text-align: center;
+          
+            
+        }
+        .name
+        {
+    
+          margin: 0 0 0 0;
+        }
+        table,th,td
+        {
+          border: 1px solid black;
+          border-collapse: collapse;
+          background-color: pink;
+        }
+    </style>
+</head>
+<body>
+  <div>
+    <table>
+        <caption>
+          成绩单
+        </caption>
+        <tbody>
+          <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>成绩总分</th>
+            <th>平均分</th>
+          </tr>
+            <script>
+                let arr = [{name:'小明',age:18,zongfen:366,pingjun:366/4},
+                           {name:'小明',age:18,zongfen:366,pingjun:366/4},
+                           {name:'小明',age:18,zongfen:366,pingjun:366/4},
+                           {name:'小明',age:18,zongfen:366,pingjun:366/4}]
+                          for(i=0;i<=arr.length-1;i++)
+                        {
+                          
+                            write(i)
+                          
+                         }
+                         //正常打印出上表
+                          function add(button)
+                          {
+                            let addname = prompt('请输入她的名字')
+                            let addage = +prompt('请输入她的年龄')
+                            let addzongfen = +prompt('请输入她的总分')
+                            let pingjun = addzongfen/4
+                            arr.push({name:addname,age:addage,zongfen:addzongfen,pingjun:pingjun})
+                            write(arr.length-1)
+                            for(i=arr.length-1;i<=arr.length-1;i++)
+                        {
+                          
+                            write(i)
+                          
+                         }
+                          }
+                          //设置按钮点击增加对象功能
+                          console.log(arr);
+                          function write(i)
+                          {
+                            document.write( 
+                          `
+                          <tr>
+                              <th class="name">${arr[i].name}</th>
+                              <td class="age">${arr[i].age}</td>
+                              <td class="zongfen">${arr[i].zongfen}</td>
+                              <td class="pingjunfen">${arr[i].pingjun}</td>
+                          </tr>
+                          `               )
+                          }
+                          
+                          
+            </script>
+        </tbody>
+    </table>
+    <button onclick="add(this)">新增成员</button>
+   
+  </div>
+        
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            .box
+            {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+        </style>
+</head>
+<body>
+    <button onclick="bianse(this)">点我变色</button>
+    <div class="box"></div>
+    <script>
+        let box = document.querySelector('.box')
+        box.style.backgroundColor = 'pink';
+        box.style.width = '400px'
+        function bianse(button)
+        {
+            let str = '#'
+            let a = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
+            for(i=1;i<=6;i++)
+            {
+                str+=a[Math.floor(Math.random()*a.length)]
+            }
+            box.style.backgroundColor=str;
+        }
+    </script>
+    </script>
+</body>
+</html>

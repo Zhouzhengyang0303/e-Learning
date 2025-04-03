@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="huanimg(this)">点我换图啊</button>
+    <img src="https://p1.ssl.qhimg.com/t01090f8b4d08a8d209.jpg"style='width: 400px;heigh:400px;object-fit:cover'>
+    <script>
+    function huanimg(button)
+    {
+        const img=document.querySelector('img')
+        const img1=['https://ts1.tc.mm.bing.net/th/id/R-C.a9fc8f2c6f61c6ea393a63aa74349eec?rik=rwIKxC35McxGng&riu=http%3a%2f%2fpic.baike.soso.com%2fp%2f20110816%2f20110816152846-229199984.jpg&ehk=olggTnpfpUoMI8YKR3B87HmHfOaRcjajGmP4L8IZ9QY%3d&risl=&pid=ImgRaw&r=0',
+        'https://p1.ssl.qhimg.com/t01090f8b4d08a8d209.jpg','https://ts1.tc.mm.bing.net/th/id/R-C.0d283ccdda1cf9824c969e2c78ec1945?rik=jpkmfewLAuLesA&riu=http%3a%2f%2fhimg2.huanqiu.com%2fattachment2010%2f2019%2f0114%2f21%2f27%2f20190114092736819.jpg&ehk=sqPmrSg6vVubNIwOWjyistG29XFAnPIadc9iMBmRXj0%3d&risl=&pid=ImgRaw&r=0']
+        for(i=1;i<=img1.length;i++)
+    {   
+        let suiji = Math.floor(Math.random()*img1.length)
+        img.src=img1[suiji]
+        img.title='我的帅照'
+    }
+    }
+    </script>
+</body>
+</html>

@@ -76,6 +76,7 @@
     
 
 .content div p{
+    display: flex;
     text-align: center;
     font-size: 12px;
 }

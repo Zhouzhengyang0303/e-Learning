@@ -33,3 +33,27 @@ function a1() {
 function tiaozhuan6(button) {
     location.href = "旅行登记.HTML";
 }
+function queding(button)
+{
+    if  (wherechufa.value == "") {
+        alert("出发地不能为空！");
+        return false;
+    }
+    if  (wheredaona.value == "") {
+        alert("目的地不能为空！");
+        return false;
+    }   
+    if  (whenchufa.value == "") {
+        alert("出发时间不能为空！");
+        return false;
+    }
+        if  (whenfanhui.value == "") {
+            alert("返回时间不能为空！");
+            return false;  
+    }  
+    if  (wherechufa.value == wheredaona.value) {
+        alert("出发地和目的地不能相同！");
+        return false;
+    }
+    alert(`正在查询${wherechufa.value}到${wheredaona.value}的${whenchufa.value}和${whenfanhui.value}的航班信息`);
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="text" rows="10" cols="30">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</textarea><br>
+    <button id="btn" disabled>我已经阅读用户协议(60)</button>
+    <script>
+        const text = document.querySelector('#text')
+        const btn = document.querySelector('#btn')
+        let time = 5
+        setInterval(function(){
+            time--
+            btn.innerHTML = `我已经阅读用户协议(${time})`
+            if (time <= 0)
+        {
+            btn.innerHTML = `同意`//button没有VALUE属性，所以不能用value来获取值
+            btn.style.backgroundColor = 'green'
+            btn.disabled = false
+            clearInterval(this)
+        }
+        },1000)
+    </script>
+</body>
+</html>

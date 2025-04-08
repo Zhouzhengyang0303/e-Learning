@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body div{
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        let div = document.querySelector('div')
+        div.addEventListener('mouseenter',function(){
+            a=GetRandomColor()
+            div.style.backgroundColor = a
+        }  
+        )
+        div.addEventListener('mouseleave',function(){
+            a=GetRandomColor()
+            div.style.backgroundColor = a
+        }
+        )
+        function GetRandomColor(flag=true)
+        {
+            let r = Math.floor(Math.random()*256)
+            let g = Math.floor(Math.random()*256)
+            let b = Math.floor(Math.random()*256)
+            return `rgb(${r},${g},${b})`
+        }
+
+    
+    </script>
+</body>
+</html>

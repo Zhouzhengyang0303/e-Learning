@@ -11,7 +11,7 @@
             <img src="https://ts2.cn.mm.bing.net/th?id=ORMS.e201fc5fdb9ef1a7a276905bd60dd1a2&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0">
         </div>
         <div class="slider-footer">
-            <p>破防了</p>
+            <p>对人类来说会不会太超前了？</p>
             <ul class="slider-indicator">
             <li class="active"></li>
             <li></li>
@@ -119,20 +119,66 @@
         
         const  img = document.querySelector('.slider-wrapper img')
         const p = document.querySelector('.slider-footer p')
+        const sli = document.querySelector('.slider-footer')
         let a = 0
-        setInterval(function(){
+        let b = setInterval(function(){
            
            img.src=pic[a].url       //吧地址写到标签里面
            p.innerHTML=pic[a].title //把字写到P里面
+           sli.style.backgroundColor=pic[a].color//把颜色写到背景里面
            document.querySelector('.slider-indicator li.active').classList.remove('active')//去掉全部的的active（bug:到了最后就会删除最后一个）
            document.querySelector(`.slider-indicator li:nth-child(${a+1})`).classList.add('active')
            a++
         //    document.querySelector(`.slider-indicator li:nth-child(${a})`).classList.remove('active')//去掉上一个的active，但是不行到最后一个会一直保留
-           if(a===pic.length-1)
+           if(a===pic.length)
            {    
             a=0
            }
-        },1500)
+        },1000)
+        const prev = document.querySelector('.prev')
+        const next = document.querySelector('.next')
+        function toggle()
+        {
+            img.src=pic[a].url
+            p.innerHTML=pic[a].title
+            sli.backgroundColor=pic[a].color
+            document.querySelector('.slider-indicator li.active').classList.remove('active')//去掉全部的的active（bug:到了最后就会删除最后一个）
+            document.querySelector(`.slider-indicator li:nth-child(${a+1})`).classList.add('active')
+        }
+        next.addEventListener('click', function () {
+          a++
+          a = a >= pic.length ? 0 : a
+          toggle()
+      })
+
+      prev.addEventListener('click', function () {
+        a--
+        a = a < 0 ? pic.length - 1 : a
+        toggle()
+    })
+   
+
+
+    // 4. 鼠标经过大盒子，停止定时器
+    const slider = document.querySelector('.slider')
+    // 注册事件
+    slider.addEventListener('mouseenter', function () {
+      // 停止定时器
+      clearInterval(b)
+    })
+
+    // 5. 鼠标离开大盒子，开启定时器
+    // 注册事件
+    slider.addEventListener('mouseleave', function () {
+      // 停止定时器
+      clearInterval(b)
+      // 开启定时器
+      b = setInterval(function () {
+        next.click()
+      }, 1000)
+              
+      })
+   
     </script>
 </body>
 </html>

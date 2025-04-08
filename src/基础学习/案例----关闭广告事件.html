@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body
+        {
+            align-items: center;
+            
+        }
+        .guanggao
+        {
+            width: 400px;
+            height: 400px;
+            margin: 250px 600px;
+            background-image: url('https://ts1.tc.mm.bing.net/th/id/OIP-C.ggBGEDTZ8HzRRp-VmnzGeAHaEL?w=275&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .guanggao img
+        {
+            width: 20px;
+            height: 20px;
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <div class="guanggao">
+            <img src="https://ts4.tc.mm.bing.net/th/id/OIP-C.IoPzZTrBZUBDq3z4JbuZJgHaHa?w=249&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+    </div>
+    <script>
+        const img = document.querySelector('.guanggao img')
+        img.addEventListener('click', function(){
+            const guanggao = document.querySelector('.guanggao')
+            guanggao.style.display = 'none'
+        })
+    </script>
+</body>
+</html>

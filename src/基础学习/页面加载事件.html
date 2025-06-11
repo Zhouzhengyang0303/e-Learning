@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;margin-top: 200px;">
+    <button style="text-align: center;">注册成功</button>
+    <script>
+        //等待页面加载完毕再去处理回调函数
+        // window.addEventListener('load',function(){
+        //     const button = document.querySelector('button')
+        //     button.addEventListener('click',function(){
+        //         alert('注册成功')
+        //     })
+        // })
+
+        document.addEventListener('DOMContentLoaded',function(){
+            const button = document.querySelector('button')
+            button.addEventListener('click',function()
+        {
+                alert('注册成功')
+        })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buju
+        {
+            justify-content: center;
+            margin-left: 490px;
+            margin-top: 290px;
+        }
+        .biao
+        {
+            border: 1px black solid;
+            width: 500px;
+            height: 200px;
+            background-color: pink;
+            border-radius: 0%;
+
+        }
+        .biao tr td
+        {
+            border: solid 1px black;
+            height: 44px;
+            text-align: center;
+        }
+        .ck:checked
+        {
+            width: 20px;
+            height: 20px;
+        }
+        #ckeckall
+        {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="buju">
+    <table class="biao">
+        <tr>
+            <td><input type="checkbox" id="checkall">全选</td>
+            <td>商品</td>
+            <td>商家</td>
+            <td>价格</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="ck"></td>
+            <td>小米手机</td>
+            <td>小米</td>
+            <td>1999元</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="ck"></td>
+            <td>小米净水器</td>
+            <td>小米</td>
+            <td>4999元</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="ck"></td>
+            <td>小米电视</td>
+            <td>小米</td>
+            <td>5999元</td>
+        </tr>
+    </table>
+    </div>
+    <script>
+        const checkall = document.querySelector('#checkall')
+        const ck =document.querySelectorAll('.ck')
+
+        checkall.addEventListener('click',function(){
+        if(checkall.checked===true)
+        {
+            kaiqi()
+        }
+        else
+        {
+            guanbi()
+        }
+        function kaiqi(){
+            for(i=0;i<=ck.length;i++)
+        {
+            ck[i].checked = true
+        }
+        }
+        function guanbi(){
+            for(i=0;i<=ck.length;i++)
+            {
+                ck[i].checked = false
+            }
+        }
+        })
+        a=0
+    for(i=0;i<ck.length;i++)
+    {
+        ck[i].addEventListener('click',function(){
+        const d = document.querySelectorAll('.ck:checked').length
+        if(d === ck.length)
+        {
+            checkall.checked = true
+        }
+        if (d === 0)
+        {
+            checkall.checked = false
+        }
+        })   
+    } 
+    </script>
+</body>
+</html>

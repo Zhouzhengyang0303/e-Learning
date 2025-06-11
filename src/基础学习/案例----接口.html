@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //接口地址
+        const url = 'https://api.apiopen.top/getJoke?page=1&count=2&type=video'
+        //创建一个XMLHttpRequest对象
+        const xhr = new XMLHttpRequest()
+        //设置请求方法和请求地址
+        xhr.open('GET', url, true)
+        //设置请求头（可选）
+        xhr.setRequestHeader('Content-Type', 'application/json')
+        //设置响应类型（可选）
+        xhr.responseType = 'json'
+        //设置请求完成的回调函数
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                //请求成功，处理响应数据
+                const data = xhr.response
+                console.log(data)
+            } else {
+                //请求失败，处理错误
+                console.error('请求失败:', xhr.status, xhr.statusText)
+            }
+        }
+        //设置请求出错的回调函数（可选）
+        xhr.onerror = function() {
+            console.error('请求出错')
+        }
+        //发送请求
+        xhr.send()
+        //设置请求取消的回调函数（可选）
+        xhr.onabort = function() {
+            console.log('请求已取消')
+        }
+        //取消请求（可选）
+        //xhr.abort()
+        //设置请求超时的回调函数（可选）
+        xhr.ontimeout = function() {
+            console.error('请求超时')
+        }
+        //设置请求超时时间（可选）
+
+        xhr.timeout = 5000 // 5秒超时
+        //设置请求进度的回调函数（可选）
+        xhr.onprogress = function(event) {
+            if (event.lengthComputable) {
+                const percentComplete = (event.loaded / event.total) * 100
+                console.log('请求进度:', percentComplete.toFixed(2) + '%')
+            } else {
+                console.log('请求进度未知')
+            }
+        }
+        //设置请求重试的回调函数（可选）
+        xhr.onretry = function() {
+            console.log('请求重试')
+        }
+        //设置请求重试次数（可选）
+        xhr.retryCount = 3 // 重试3次
+        //设置请求重试间隔（可选）
+        xhr.retryInterval = 1000 // 1秒重试间隔
+        //设置请求重试的条件（可选）
+        xhr.retryCondition = function() {
+            return xhr.status >= 500 // 服务器错误时重试
+        }
+        //设置请求重试的回调函数（可选）
+        xhr.onretry = function() {
+            console.log('请求重试')
+        }
+        //设置请求重试的次数（可选）
+        xhr.retryCount = 3 // 重试3次
+        //设置请求重试的间隔（可选）
+        xhr.retryInterval = 1000 // 1秒重试间隔
+        
+    </script>
+</body>
+</html>

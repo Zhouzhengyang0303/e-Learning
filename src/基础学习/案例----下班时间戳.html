@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        const div = document.querySelector('div');
+        const date0 = new Date()
+        const date2 = +new Date(date0.getFullYear(), date0.getMonth(), date0.getDate(), 18, 30, 0) 
+        console.log(date2);
+        const getxiabanshijian = function() {
+            const date3 = +new Date();
+            const date4 = date2 - date3;
+            const hours = Math.floor(date4 / 3600000);
+            const days = Math.floor(hours / 24);
+            const minutes = Math.floor((date4 % 3600000) / 60000);
+            const seconds = Math.floor((date4 % 60000) / 1000);
+            return `距离下班还有${hours}小时${minutes}分钟${seconds}秒`
+        }
+        setInterval(function() {
+            div.innerHTML = getxiabanshijian();
+            console.log(getxiabanshijian())
+        },1000)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grandfather{
+            width:400px;
+            height:400px;
+            background-color: red;
+        }
+        .father
+        {
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandfather">
+        <div class='father'></div>
+    </div >
+
+    <script>
+        const gf = document.querySelector('.grandfather');
+        const f = document.querySelector('.father')
+       document.addEventListener('click', function() {
+            alert('哥哥喜欢打篮球')
+        });
+        gf.addEventListener('click',function(e)
+        {
+            alert('哥哥的爷爷喜欢打乒乓球')
+            e.stopPropagation(); // 阻止事件冒泡
+        })
+        
+            
+        
+        f.addEventListener('click',function(e)
+        {
+            alert('哥哥的爸爸喜欢打羽毛球')
+            e.stopPropagation(); // 阻止事件冒泡
+
+        })
+    </script>
+</body>
+</html>

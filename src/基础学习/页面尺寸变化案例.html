@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin:100px;
+        }
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            5555555555555555555555555555555555555
+        </p>
+    </div>
+    <script>
+        const div = document.querySelector('div');
+        // 1. 获取元素
+        
+        console.log(`${div.clientWidth}`)//获取宽高
+        console.log(`${div.clientHeight}`)
+        window.addEventListener('resize', function() {
+            // console.log(`${div.offsetLeft}`)//
+            // console.log(`${div.clientHeight}`)
+            console.log(1)
+        })
+        const p = document.querySelector('div p')
+
+
+
+    </script>
+        
+        
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height: 200px;
+            background-color: pink;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        const div = document.querySelector('div');
+        
+       
+        function getnewdate()
+        {
+            const date = new Date()
+            let h = date.getHours()
+            h = h < 10 ? '0' + h : h
+            let m = date.getMonth()
+            m = m < 10 ? '0' + m : m
+            let d = date.getHours()
+            d = d < 10 ? '0' + d : d
+
+            return `今天是${date.getFullYear()}年${date.getMonth()+1}月${date.getDay()}日${date.getHours()}时${date.getMinutes()}分${date.getSeconds()}秒`;
+        }
+
+        div.innerHTML = getnewdate();
+        setInterval(function()
+        {
+            div.innerHTML = getnewdate();
+        },500)
+            
+        
+        
+    </script>
+</body>
+</html>

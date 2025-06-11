@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width:400px;
+            height:400px;
+            background-color: red;
+        }
+        .son
+        {
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector('.father')
+        const son = document.querySelector('.son')
+        btn.addEventListener('mouseenter',function()
+    {
+            console.log
+            ('哥哥喜欢打篮球')
+        })
+    
+        btn.addEventListener('mouseleave',function()
+        {
+            console.log('哥哥的爷爷喜欢打乒乓球')
+        })
+        // btn.removeEventListener('click',fn)     // 移除事件监听器  
+    </script>
+</body>
+</html>
